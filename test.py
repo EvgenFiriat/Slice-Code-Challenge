@@ -33,6 +33,10 @@ class UtilsTestCase(unittest.TestCase):
         user_input = '5x5(0,0)(1,3)(4,4)(4,2)(4,2)(0,1)(3,2)(2,3)(4,1)'
         self.assertEqual(grid_arg(user_input), user_input)
 
+    def test_grid_arg_validator__validates_user_input_with_spaces(self):
+        user_input = '5x5(0, 0)(1, 3)(4, 4)(4, 2)(4, 2)(0, 1)(3, 2)(2, 3)(4, 1)'
+        self.assertEqual(grid_arg(user_input), user_input)
+
     def test_grid_arg_validator__raises_if_user_input_is_incorrect(self):
         with self.assertRaises(ArgumentTypeError):
             user_input = '55(0,0)(1,3)(4,4)(4,2)(4,2)(0,1)(3,2)(2,3)(4,1)'
