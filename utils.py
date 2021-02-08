@@ -16,7 +16,7 @@ def parse_input_data(user_input: str) -> dict:
     coords_substring = re.sub(r'\d+x\d+', '', user_input)
     coords = [
         ast.literal_eval(coord_pair_str.group(0))
-        for coord_pair_str in re.finditer(r'\((\d+),(\d+)\)', coords_substring)
+        for coord_pair_str in re.finditer(r'\((\d+),\s*(\d+)\)', coords_substring)
     ]
 
     return {
