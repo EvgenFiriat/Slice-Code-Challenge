@@ -4,7 +4,7 @@ import math
 from utils import parse_input_data, all_coords_within_grid
 
 
-def build_route(user_input):
+def build_route(user_input: str) -> str:
     current_point = (0, 0)
     data = parse_input_data(user_input)
     route = ''
