@@ -4,7 +4,7 @@ import re
 from path_search import build_route
 
 
-def grid_arg(user_input):
+def grid_arg(user_input: str) -> str:
     if not re.match(r'^\d+x\d+(\(\d+,\d+\))+$', user_input):
         raise argparse.ArgumentTypeError('Invalid input format')
 
